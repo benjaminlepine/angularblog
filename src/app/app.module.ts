@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {getElementDepthCount} from "@angular/core/src/render3/state";
 import { AppareilComponent } from './appareil/appareil.component';
 
+import {AppareilService} from "./services/appareil.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { AppareilComponent } from './appareil/appareil.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AppareilService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

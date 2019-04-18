@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {AppareilService} from "./services/appareil.service";
 
 
 @Component({
@@ -6,13 +7,22 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   isAuth = false;
-  appareilOne = 'Machine à laver';
-  appareilTwo = 'Frigo';
-  appareilThree = 'Ordinateur';
+  lastUpdate = new Promise(
+    (resolve, reject)=>{
+      const date = new Date();
+      setTimeout(
+        ()=>{
+          resolve(date);
+        }, 3000
+      );
+    }
+  );
 
-  constructor(){
+  appareils:any[];
+
+  constructor(private appareilService : AppareilService){
     setTimeout(
       ()=>{
         this.isAuth = true;
@@ -20,7 +30,15 @@ export class AppComponent {
     );
   }
 
+  ngOnInit(){
+    this.appareils = this.appareilService.appareils;
+  }
+
   onAllumer(){
-    console.log("tototo")
+    this.appareilService.switchOnAll()
+  }
+
+  onEteindre(){
+    this.appareilService.switchOffAll()
   }
 }

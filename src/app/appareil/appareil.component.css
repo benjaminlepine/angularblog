@@ -1,0 +1,15 @@
+.down{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+.up{
+  width: 20px;
+  height: 20px;
+  background-color: greenyellow;
+}
+
+.inline{
+  display: inline;
+}
