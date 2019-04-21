@@ -11,5 +11,23 @@ html, body {
 }
 
 .margintop{
-  margin-top: 25px;
+  margin-top: 45px;
+}
+
+label{
+  color: white;
+}
+
+.btn{
+  margin-right: 6px;
+  margin-left: 6px;
+  margin-bottom: 10px;
+}
+
+.btn-danger{
+  background-color: #dc711a;
+}
+
+.btn-danger:hover{
+  background-color: #dc8845;
 }

@@ -13,3 +13,27 @@
 .inline{
   display: inline;
 }
+
+.my-button{
+  background-color: #3664d6;
+  color: white;
+}
+
+.my-button:hover {
+  background-color: #6496DC ;
+}
+
+.my-delete-button{
+  background-color: #ad0f12;
+  color: white;
+}
+
+.my-delete-button:hover {
+  background-color: #ce484d;
+}
+
+.right{
+  float: right;
+}
+
+

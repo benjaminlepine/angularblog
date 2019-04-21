@@ -1,6 +1,40 @@
-a{
-  color: white;
-  font-size: 25px;
+.add {
+  margin-left: 46%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url("../../assets/add_b.png");
+  background-color: white;
+  transition: background-color 0.3s ease;
+  background-repeat:no-repeat;
+  background-position:center center;
 }
+
+.add:hover{
+  cursor: pointer;
+  background-color: #13246b;
+  background-image: url("../../assets/add_w.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

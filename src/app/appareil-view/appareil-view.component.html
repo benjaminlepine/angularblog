@@ -1,4 +1,4 @@
-<div class="col-xs-12">
+<div class="col-sm-8 col-sm-offset-2">
   <h2>Mes appareils</h2>
   <p>Mis à jour : {{lastUpdate |async | date |uppercase}}</p>
   <ul class="list-group">
@@ -8,9 +8,9 @@
                   [appareilStatus]="appareil.status"
                   [id]="appareil.id">
     </app-appareil>
-    <button class="btn btn-success" (click)="onAllumer()">Tout Allumer</button>
-    <button class="btn btn-danger" (click)="onEteindre()">Tout Eteindre</button>
-
-
+    <div class="container-button">
+      <button class="btn btn-success" (click)="onAllumer()">Tout Allumer</button>
+      <button class="btn btn-danger" (click)="onEteindre()">Tout Eteindre</button>
+    </div>
   </ul>
 </div>
