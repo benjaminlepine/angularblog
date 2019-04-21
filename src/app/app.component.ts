@@ -6,7 +6,7 @@ import {Subscription} from "rxjs/Subscription";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
   secondes: number;
@@ -14,18 +14,18 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(){}
 
   ngOnInit(){
-    const counter = Observable.interval(1000);
+    const counter = Observable.interval(5000);
     this.counterSubscription = counter.subscribe(
       (value:number)=>{
-        this.secondes = value;
+        this.secondes = value*5;
       }
     )
   }
 
   ngDoCheck(){
-    if(this.secondes >= 10)
+    if(this.secondes >= 999)
     this.ngOnDestroy()
-    console.log(this.secondes)
+    //console.log(this.secondes)
   }
 
   ngOnDestroy(){

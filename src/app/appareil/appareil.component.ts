@@ -37,4 +37,8 @@ export class AppareilComponent implements OnInit {
     this.appareilService.switchOffOne(this.indexOfAppareil)
   }
 
+  deleteAppareil(){
+    this.appareilService.deleteAppareil(this.indexOfAppareil)
+  }
+
 }

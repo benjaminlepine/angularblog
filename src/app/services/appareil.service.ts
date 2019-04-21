@@ -45,4 +45,25 @@ export class AppareilService {
   emitAppareilSubject(){
     this.appareilSubject.next(this.appareils.slice())
   }
+
+  addAppareil(name:string, status:string){
+    const appareilObject = {
+      id:0,
+      name:'',
+      status:''
+    };
+    appareilObject.name = name;
+    appareilObject.status = status;
+    appareilObject.id = this.appareils[(this.appareils.length - 1)].id + 1
+    this.appareils.push(appareilObject)
+    this.emitAppareilSubject();
+  }
+
+  deleteAppareil(id:number){
+    console.log("id = ",id)
+    this.appareils.splice(id, 1);
+    console.log("id tab = ", this.appareils)
+    this.emitAppareilSubject();
+  }
+
 }

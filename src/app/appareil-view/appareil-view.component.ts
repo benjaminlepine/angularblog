@@ -5,7 +5,7 @@ import { Subscription } from "rxjs/Subscription";
 @Component({
   selector: 'app-appareil-view',
   templateUrl: './appareil-view.component.html',
-  styleUrls: ['./appareil-view.component.scss']
+  styleUrls: ['./appareil-view.component.css']
 })
 export class AppareilViewComponent implements OnInit {
 
