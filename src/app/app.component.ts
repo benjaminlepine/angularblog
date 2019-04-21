@@ -10,25 +10,19 @@ import {Subscription} from "rxjs/Subscription";
 })
 export class AppComponent implements OnInit, OnDestroy {
   secondes: number;
-  counterSubscription: Subscription;
+  // counterSubscription: Subscription;
   constructor(){}
 
   ngOnInit(){
-    const counter = Observable.interval(5000);
-    this.counterSubscription = counter.subscribe(
-      (value:number)=>{
-        this.secondes = value*5;
-      }
-    )
-  }
-
-  ngDoCheck(){
-    if(this.secondes >= 999)
-    this.ngOnDestroy()
-    //console.log(this.secondes)
+    // const counter = Observable.interval(5000);
+    // this.counterSubscription = counter.subscribe(
+    //   (value:number)=>{
+    //     this.secondes = value*5;
+    //   }
+    // )
   }
 
   ngOnDestroy(){
-    this.counterSubscription.unsubscribe()
+    // this.counterSubscription.unsubscribe()
   }
 }
